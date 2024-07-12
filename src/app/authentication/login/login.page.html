@@ -1,0 +1,35 @@
+<ion-content>
+  <ion-card style="height: 27rem;
+  margin: 5% 10%;">
+  <ion-card-header style="position: relative;background:var(--ion-color-secondary);">
+   <ion-row>
+    <ion-col class="ion-text-left">
+      <h2>Login</h2>
+    </ion-col>
+    <ion-col class="ion-text-right">
+      <img src="./assets/icon/quiz.png" style="    max-width: 18%;
+      text-align: center;
+      display: inline-block;">
+    </ion-col>
+   </ion-row>
+  
+  </ion-card-header>
+  <ion-list style="margin-top: 4rem;">
+    <ion-item style="height: 6rem;">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-footer style="    position: fixed;
+  bottom: 0;">
+    <ion-row>
+      <ion-col><ion-button expand="block" (click)="login()">Login</ion-button></ion-col>
+      <ion-col><ion-button expand="block" (click)="register()">Register</ion-button></ion-col>
+    </ion-row>   
+  </ion-footer>
+</ion-card>
+</ion-content>

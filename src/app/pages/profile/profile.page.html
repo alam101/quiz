@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        <img src="data:image/jpeg;base64,{{profile.photo}}">
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Name</ion-label>:
+        <ion-input [(ngModel)]="profile.name" disabled></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email</ion-label>:
+        <ion-input [(ngModel)]="profile.email" disabled></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mobile</ion-label>:
+        <ion-input [(ngModel)]="profile.mobile" disabled></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Date of Birth</ion-label>:
+        <ion-input [(ngModel)]="profile.dob" disabled></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Class</ion-label>:
+        <ion-input [(ngModel)]="profile.class" disabled></ion-input>
+      </ion-item>
+      <!-- You may display other profile details here -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

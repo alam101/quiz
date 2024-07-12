@@ -1,0 +1,7 @@
+{
+  "name": "quiz-frontend",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

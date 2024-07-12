@@ -1,0 +1,67 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Test {{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+  <ion-card style="margin: 2rem 7rem;height: 80%;">
+    <ion-card-header style="position: relative;background:var(--ion-color-secondary);">
+     <ion-row>
+      <ion-col class="ion-text-left">
+        <h2 style="color:#fff;margin: .5rem;">{{ folder }} Test</h2>
+      </ion-col>
+      <ion-col class="ion-text-right">
+        <img src="./assets/icon/quiz.png" style="    max-width: 12%;
+        text-align: center;
+        display: inline-block;">
+      </ion-col>
+     </ion-row>
+    </ion-card-header>
+  <div id="container">
+    <!-- <strong class="capitalize">{{ folder }}</strong> -->
+   <ion-card style="padding: 1rem; text-align: left; padding: 1rem; background: var(--ion-color-secondary);">
+   <p style="color:#fff;"> {{quizQuestion}}</p> 
+   </ion-card>
+   <div style="    left: 8%;
+
+   position: relative;
+   top:8%; transform: calc(8%,-8%);">
+    <ion-card style="width: 35%;
+    float: left;
+    padding: 2.5rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 2rem 2rem;" (click)="selectedOption(option,index)" 
+    [ngClass]="{'green-active-border': activeIndex===index}" 
+    *ngFor="let option of options; let index=index;" class="option">
+      {{option.option}}
+    </ion-card>
+  </div>
+  </div>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col >
+      <ion-button shape="round" expand="full"  (click)="submitAnswer()">Save As Draft</ion-button>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+    <ion-col>
+      <ion-button shape="round" style="border: outline;;" expand="full"  (click)="next()">Next</ion-button>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+    <ion-col >
+      <ion-button shape="round" expand="full"  (click)="submitAnswer()">Submit Result</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
